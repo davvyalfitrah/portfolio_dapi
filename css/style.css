@@ -87,6 +87,56 @@ body
     font-size: 25px;
     text-align: justify;
 }
+/* Style untuk galeri */
+.portfolio-gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 15px;
+}
+
+.portfolio-item {
+	position: relative;
+	overflow: hidden;
+	width: 30%;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.portfolio-item img {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+}
+
+.portfolio-item.hidden {
+	opacity: 0;
+	transform: scale(0.8);
+	display: none !important;
+}
+
+/* Style tombol filter */
+.filter-btn {
+	padding: 10px 20px;
+	margin: 10px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.filter-btn:hover {
+	background-color: #0056b3;
+	transform: scale(1.1);
+}
+
+.filter-btn.active {
+	background-color: #0056b3;
+	font-weight: bold;
+}
 
 /* Portfolio */
 .portfolio .heading
