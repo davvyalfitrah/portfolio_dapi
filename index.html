@@ -58,7 +58,10 @@
 					<br>
 					<p>email: davvyalfitrah15@gmail.com </p>
 					<br>
-					<p>alamat: regensi melati mas blok B, Tangerang selatan, indonesia</p>
+				<div class="col-md-12 text-center">
+				<h2>Location</h2>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.3789603218243!2d106.68897417478489!3d-6.344945862076741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e50078ae00b1%3A0x81a60674ba49b072!2sUnpam%20Viktor!5e0!3m2!1sid!2sid!4v1736146859229!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
 				</div>
 			</div><!-- End col-md-6 -->
 			<div class="col-md-6 col-sm-6 nopadding">
@@ -81,7 +84,76 @@
 		</div>
 	</div>
 </section>
+<!-- portfolio -->
 
+<section class="portfolio">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1 class="heading">Portfolio</h1>
+			</div><!-- End col-md-12 -->
+
+			<!-- Ganti seluruh isi dari sini -->
+			<div class="text-center">
+				<button class="filter-btn" data-filter="all">All</button>
+				<button class="filter-btn" data-filter="ilustrasi">Ilustrasi</button>
+				<button class="filter-btn" data-filter="desain-grafis">Desain Grafis</button>
+				<button class="filter-btn" data-filter="fotografi">Fotografi</button>
+			</div>
+
+			<div class="row portfolio-gallery">
+				<div class="col-md-4 col-sm-4 portfolio-item" data-category="ilustrasi">
+					<img src="images/p-1.png" alt="Ilustrasi" class="card-img-top">
+				</div>
+				<div class="col-md-4 col-sm-4 portfolio-item" data-category="desain-grafis">
+					<img src="images/p-2.png" alt="Desain Grafis" class="card-img-top">
+				</div>
+				<div class="col-md-4 col-sm-4 portfolio-item" data-category="fotografi">
+					<img src="images/p-3.png" alt="Fotografi" class="card-img-top">
+				</div>
+				<div class="col-md-4 col-sm-4 portfolio-item" data-category="ilustrasi">
+					<img src="images/p-4.png" alt="Ilustrasi" class="card-img-top">
+				</div>
+				<div class="col-md-4 col-sm-4 portfolio-item" data-category="desain-grafis">
+					<img src="images/p-5.png" alt="Desain Grafis" class="card-img-top">
+				</div>
+				<div class="col-md-4 col-sm-4 portfolio-item" data-category="fotografi">
+					<img src="images/p-6.png" alt="Fotografi" class="card-img-top">
+				</div>
+			</div>
+			<!-- Sampai sini -->
+
+		</div><!-- End row -->
+	</div><!-- End container -->
+</section>
+
+<!-- Custom JS -->
+<script type="text/javascript" src="js/custom.js">
+	
+</script>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		const buttons = document.querySelectorAll(".filter-btn");
+		const items = document.querySelectorAll(".portfolio-item");
+
+		buttons.forEach(button => {
+			button.addEventListener("click", () => {
+				const filter = button.getAttribute("data-filter");
+
+				// Loop melalui semua item galeri
+				items.forEach(item => {
+					// Tampilkan atau sembunyikan item berdasarkan kategori
+					if (filter === "all" || item.getAttribute("data-category") === filter) {
+						item.style.display = "block";
+					} else {
+						item.style.display = "none";
+					}
+				});
+			});
+		});
+	});
+</script>
 <!-- portfolio -->
 
 <section class="portfolio">
